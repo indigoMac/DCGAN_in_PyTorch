@@ -4,6 +4,7 @@ This project implements a Deep Convolutional Generative Adversarial Network (DCG
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Theory](#theory)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Model Architecture](#model-architecture)
@@ -13,6 +14,28 @@ This project implements a Deep Convolutional Generative Adversarial Network (DCG
 
 ## Introduction
 Generative Adversarial Networks (GANs) are a class of machine learning frameworks designed by Goodfellow et al. in 2014. This project uses a variant called DCGAN, which leverages convolutional layers to generate realistic images.
+
+## Theory
+### What are GANs?
+Generative Adversarial Networks (GANs) are composed of two neural networks, a Generator (G) and a Discriminator (D), which contest with each other in a game-theoretic framework. The generator creates fake data samples, while the discriminator evaluates their authenticity. The primary objective is for the generator to produce data indistinguishable from the real data, while the discriminator aims to distinguish between real and fake samples.
+
+### How GANs Work
+1. **Generator**: The generator network takes random noise as input and generates data samples (e.g., images).
+2. **Discriminator**: The discriminator network takes an input (either real data or generated data) and outputs a probability that the input is real.
+3. **Training Process**:
+   - The generator creates fake samples and the discriminator tries to classify them as fake.
+   - The discriminator is also trained on real data and tries to classify it as real.
+   - The generator aims to fool the discriminator by generating better samples.
+   - This adversarial process continues, improving both networks until the generator produces realistic data samples.
+
+### Applications of GANs
+GANs have a wide range of applications, including:
+- **Image Generation**: Creating realistic images from random noise.
+- **Image-to-Image Translation**: Converting images from one domain to another (e.g., sketch to photo).
+- **Super-Resolution**: Enhancing the resolution of images.
+- **Data Augmentation**: Generating new samples for training machine learning models.
+- **Text-to-Image Synthesis**: Generating images from textual descriptions.
+
 
 ## Installation
 To run this project, you need to have Python and the following libraries installed:
